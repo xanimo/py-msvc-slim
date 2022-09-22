@@ -1,0 +1,15 @@
+@echo off
+set ROOT="%~dp0\\opt\\msvc"
+set MSVCVER=14.33.31629
+set SDKVER=10.0.19041.0
+set ARCH=x64
+set MSVCDIR="%ROOT%\\vc\\tools\\msvc\\%MSVCVER%"
+set SDKINCLUDE="%ROOT%\\kits\\10\\include\\%SDKVER%"
+set SDKLIB="%ROOT%\\kits\\10\\lib\\%SDKVER%"
+set BINDIR="%ROOT%\\vc\\tools\\msvc\\%MSVCVER%\\bin\Hostx64\\%ARCH"
+set SDKBINDIR="%ROOT%\\kits\\10\\bin\\%SDKVER%\\x64"
+set INCLUDE="%MSVCDIR%\\include;%SDKINCLUDE%\\shared;%SDKINCLUDE%\\ucrt;%SDKINCLUDE%\\um;%SDKINCLUDE%\\winrt"
+set LIB="%MSVCDIR%\\lib\\%ARCH%;%SDKLIB%\\ucrt\\%ARCH%;%SDKLIB%\\um\\%ARCH%"
+set LIBPATH="%LIB%"
+set WINEPATH="%BINDIR%//\//\\;%SDKBINDIR%//\//\\;%MSVCDIR%\\bin\\Hostx64\\x64"
+set WINEDLLOVERRIDES="vcruntime140_1=n"
